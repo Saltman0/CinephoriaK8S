@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-nodejs-deployment
+  namespace: movie
+  annotations:
+    secrets.doppler.com/reload: 'true'
+  labels:
+    app: movie-nodejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-nodejs
+  template:
+    metadata:
+      name: movie-nodejs
+      labels:
+        app: movie-nodejs
+    spec:
+      containers:
+        - name: movie-nodejs
+          image: saltman0/nodejs-movie:dev
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3002
+              protocol: TCP
+          env:
+            - name: NODE_ENV
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: NODE_ENV
+            - name: PORT
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: PORT
+            - name: POSTGRES_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: POSTGRES_HOST
+            - name: POSTGRES_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: POSTGRES_PORT
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: POSTGRES_DB
+            - name: IS_VERBOSE_ENABLED
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: IS_VERBOSE_ENABLED
+            - name: IS_SSL_ENABLED
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: IS_SSL_ENABLED
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: JWT_KEY
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: movie-secret
+                  key: JWT_SECRET
+      restartPolicy: Always
