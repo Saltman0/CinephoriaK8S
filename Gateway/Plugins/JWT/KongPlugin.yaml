@@ -1,0 +1,9 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: jwt-plugin
+  namespace: gateway
+plugin: jwt
+config:
+  key_claim_name: "iss"
+  secret_is_base64: true
