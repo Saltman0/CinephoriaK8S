@@ -1,0 +1,10 @@
+k8s_resource(
+    new_name='kong',
+    objects=['kong-gateway-class', 'kong-gateway', 'kong-httproute-booking', 'kong-httproute-movie',
+    'kong-httproute-showtime', 'kong-httproute-user', 'kong-httproute-login', 'gateway'],
+    labels=["backend"]
+)
+
+if not os.path.exists("./Plugins/JWT") :
+    fail("JWT directory does not exists !")
+include('./Plugins/JWT/Tiltfile')
