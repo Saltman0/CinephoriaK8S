@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booking-postgresql-deployment
+  labels:
+    app: booking-postgresql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking-postgresql
+  template:
+    metadata:
+      name: booking-postgresql
+      labels:
+        app: booking-postgresql
+    spec:
+      containers:
+        - name: booking-postgresql
+          image: postgres:17.2-alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5433
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /mnt/data
+              name: booking-postgresql-persistentvolume
+      restartPolicy: Always
+      volumes:
+        - name: booking-postgresql-persistentvolume
+          persistentVolumeClaim:
+            claimName: booking-postgresql-persistentvolumeclaim
