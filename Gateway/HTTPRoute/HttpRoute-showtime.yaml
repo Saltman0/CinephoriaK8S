@@ -1,0 +1,20 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: kong-httproute-showtime
+  namespace: gateway
+  annotations:
+    konghq.com/plugins: jwt-plugin
+spec:
+  parentRefs:
+    - name: kong-gateway
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /showtime
+      backendRefs:
+        - name: showtime-nodejs-service
+          namespace: showtime
+          kind: Service
+          port: 3003

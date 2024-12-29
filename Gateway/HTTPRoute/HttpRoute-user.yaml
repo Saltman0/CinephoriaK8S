@@ -1,0 +1,20 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: kong-httproute-user
+  namespace: gateway
+  annotations:
+    konghq.com/plugins: jwt-plugin
+spec:
+  parentRefs:
+    - name: kong-gateway
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /user
+      backendRefs:
+        - name: user-nodejs-service
+          namespace: user
+          kind: Service
+          port: 3004

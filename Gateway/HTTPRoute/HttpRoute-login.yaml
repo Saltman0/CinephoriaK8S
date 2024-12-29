@@ -1,0 +1,18 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: kong-httproute-login
+  namespace: gateway
+spec:
+  parentRefs:
+    - name: kong-gateway
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /login
+      backendRefs:
+        - name: user-nodejs-service
+          namespace: user
+          kind: Service
+          port: 3004
