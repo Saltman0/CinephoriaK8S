@@ -10,4 +10,4 @@ metadata:
 plugin: jwt
 config:
   key_claim_name: "iss"
-  secret_is_base64: true
+  secret_is_base64: false
