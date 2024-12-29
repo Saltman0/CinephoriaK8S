@@ -1,0 +1,5 @@
+k8s_resource(
+    new_name='rabbitmq',
+    objects=['rabbitmq-cluster'],
+    labels=["backend"]
+)
