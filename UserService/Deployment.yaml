@@ -8,7 +8,7 @@ metadata:
   labels:
     app: user-nodejs
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: user-nodejs
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: user-nodejs
-          image: saltman0/nodejs-user:dev
+          image: saltman0/nodejs-user:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3004
