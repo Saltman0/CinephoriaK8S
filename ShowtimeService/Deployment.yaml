@@ -8,7 +8,7 @@ metadata:
   labels:
     app: showtime-nodejs
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: showtime-nodejs
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: showtime-nodejs
-          image: saltman0/nodejs-showtime:dev
+          image: saltman0/nodejs-showtime:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3003
