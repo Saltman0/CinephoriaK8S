@@ -6,8 +6,10 @@ metadata:
   labels:
     app: rabbitmq
 spec:
+  service:
+    type: LoadBalancer
   rabbitmq:
     additionalConfig: |
-      default_user=guest
-      default_pass=guest
+      default_user=Saltman
+      default_pass=B9jgWA56WKMH46fukxc1NP83Q0TgKEQbAUqd1z947Thwjc5rJWSv48u5NuaUwjRz
   replicas: 3
