@@ -81,4 +81,19 @@ spec:
                 secretKeyRef:
                   name: user-secret
                   key: JWT_SECRET
+            - name: RABBITMQ_IP
+              valueFrom:
+                secretKeyRef:
+                  name: user-secret
+                  key: RABBITMQ_IP
+            - name: RABBITMQ_USER
+              valueFrom:
+                secretKeyRef:
+                  name: user-secret
+                  key: RABBITMQ_USER
+            - name: RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: user-secret
+                  key: RABBITMQ_PASSWORD
       restartPolicy: Always
