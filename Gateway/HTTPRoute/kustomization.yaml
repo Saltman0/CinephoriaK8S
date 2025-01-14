@@ -4,6 +4,7 @@ namespace: gateway
 resources:
   - HttpRoute-booking.yaml
   - HttpRoute-login.yaml
+  - HttpRoute-infrastructure.yaml
   - HttpRoute-movie.yaml
   - HttpRoute-showtime.yaml
   - HttpRoute-user.yaml
