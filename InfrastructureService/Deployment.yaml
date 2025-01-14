@@ -23,7 +23,7 @@ spec:
           image: saltman0/nodejs-infrastructure:dev
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 3004
+            - containerPort: 3005
               protocol: TCP
           env:
             - name: NODE_ENV
