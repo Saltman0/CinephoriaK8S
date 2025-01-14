@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - BookingService
   - Gateway
+  - InfrastructureService
   - MessageBroker
   - MovieService
   - ShowtimeService
