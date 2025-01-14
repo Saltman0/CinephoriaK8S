@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: infrastructure-nodejs
-          image: saltman0/nodejs-infrastructure:dev
+          image: saltman0/nodejs-infrastructure:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3004
