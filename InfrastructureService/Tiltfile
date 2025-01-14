@@ -1,4 +1,4 @@
-docker_build('saltman0/nodejs-infrastructure:dev', '../../CinephoriaInfrastructureService')
+docker_build('saltman0/nodejs-infrastructure:1.0.0', '../../CinephoriaInfrastructureService')
 
 k8s_resource(
     new_name='infrastructure-nodejs',
