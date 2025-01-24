@@ -12,4 +12,4 @@ spec:
     additionalConfig: |
       default_user=Saltman
       default_pass=B9jgWA56WKMH46fukxc1NP83Q0TgKEQbAUqd1z947Thwjc5rJWSv48u5NuaUwjRz
-  replicas: 3
+  replicas: 1
