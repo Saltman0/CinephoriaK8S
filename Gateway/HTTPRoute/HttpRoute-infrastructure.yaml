@@ -18,6 +18,9 @@ spec:
             value: /hall
         - path:
             type: PathPrefix
+            value: /seat
+        - path:
+            type: PathPrefix
             value: /incident
       backendRefs:
         - name: infrastructure-nodejs-service
