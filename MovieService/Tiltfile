@@ -3,6 +3,6 @@ docker_build('saltman0/nodejs-movie:dev', '../../CinephoriaMovieService')
 k8s_resource(
     new_name='movie-nodejs',
     workload='movie-nodejs-deployment',
-    objects=['movie-doppler-secret', 'movie', 'movie-nodejs-referencegrant', 'movie-doppler-token-secret'],
+    objects=['movie', 'movie-nodejs-referencegrant', 'movie-secret'],
     labels=["backend"]
 )

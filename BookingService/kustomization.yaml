@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: booking
 resources:
   - Deployment.yaml
-  - DopplerSecret.yaml
   - Namespace.yaml
   - ReferenceGrant.yaml
   - Secret.yaml
