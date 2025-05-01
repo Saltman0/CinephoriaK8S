@@ -3,6 +3,6 @@ docker_build('saltman0/nodejs-booking:dev', '../../CinephoriaBookingService')
 k8s_resource(
     new_name='booking-nodejs',
     workload='booking-nodejs-deployment',
-    objects=['booking', 'booking-nodejs-referencegrant', 'booking-secret'],
+    objects=['booking-doppler-secret', 'booking', 'booking-nodejs-referencegrant', 'booking-doppler-token-secret'],
     labels=["backend"]
 )
