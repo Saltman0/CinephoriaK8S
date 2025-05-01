@@ -3,6 +3,6 @@ docker_build('saltman0/nodejs-infrastructure:dev', '../../CinephoriaInfrastructu
 k8s_resource(
     new_name='infrastructure-nodejs',
     workload='infrastructure-nodejs-deployment',
-    objects=['infrastructure', 'infrastructure-nodejs-referencegrant', 'infrastructure-secret'],
+    objects=['infrastructure-doppler-secret', 'infrastructure', 'infrastructure-nodejs-referencegrant', 'infrastructure-doppler-token-secret'],
     labels=["backend"]
 )

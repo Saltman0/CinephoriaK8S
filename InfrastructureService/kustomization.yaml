@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: infrastructure
 resources:
   - Deployment.yaml
+  - DopplerSecret.yaml
   - Namespace.yaml
   - ReferenceGrant.yaml
   - Secret.yaml
