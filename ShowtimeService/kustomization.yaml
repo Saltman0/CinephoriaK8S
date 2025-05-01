@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: showtime
 resources:
   - Deployment.yaml
+  - DopplerSecret.yaml
   - Namespace.yaml
   - ReferenceGrant.yaml
   - Secret.yaml
