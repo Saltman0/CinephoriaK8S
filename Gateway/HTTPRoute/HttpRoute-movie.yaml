@@ -3,8 +3,6 @@ kind: HTTPRoute
 metadata:
   name: kong-httproute-movie
   namespace: gateway
-  annotations:
-    konghq.com/plugins: jwt-plugin
 spec:
   parentRefs:
     - name: kong-gateway
