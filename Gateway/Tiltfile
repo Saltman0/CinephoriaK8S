@@ -1,7 +1,8 @@
 k8s_resource(
     new_name='kong',
-    objects=['kong-gateway-class', 'kong-gateway', 'kong-httproute-booking', 'kong-httproute-infrastructure',
-    'kong-httproute-movie', 'kong-httproute-showtime', 'kong-httproute-user', 'kong-httproute-login', 'gateway'],
+    objects=['kong-gateway-class', 'kong-gateway', 'kong-httproute-booking', 'kong-httproute-graphql',
+    'kong-httproute-infrastructure', 'kong-httproute-movie', 'kong-httproute-showtime', 'kong-httproute-user',
+    'kong-httproute-login', 'gateway'],
     labels=["backend"]
 )
 

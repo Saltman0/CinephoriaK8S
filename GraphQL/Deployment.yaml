@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphql-deployment
+  namespace: graphql-namespace
+  annotations:
+    secrets.doppler.com/reload: 'true'
+  labels:
+    app: graphql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graphql
+  template:
+    metadata:
+      name: graphql
+      labels:
+        app: graphql
+    spec:
+      containers:
+        - name: graphql
+          image: saltman0/graphql:dev
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 4000
+              protocol: TCP
+          env:
+            - name: IP_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: graphql-secret
+                  key: IP_ADDRESS
+            - name: PORT
+              valueFrom:
+                secretKeyRef:
+                  name: graphql-secret
+                  key: PORT
+      restartPolicy: Always
