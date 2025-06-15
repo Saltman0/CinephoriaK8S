@@ -26,11 +26,11 @@ spec:
             - containerPort: 4000
               protocol: TCP
           env:
-            - name: IP_ADDRESS
+            - name: GRAPHQL_URL
               valueFrom:
                 secretKeyRef:
                   name: graphql-secret
-                  key: IP_ADDRESS
+                  key: GRAPHQL_URL
             - name: PORT
               valueFrom:
                 secretKeyRef:
