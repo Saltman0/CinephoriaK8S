@@ -56,6 +56,11 @@ spec:
                 secretKeyRef:
                   name: infrastructure-secret
                   key: POSTGRES_PASSWORD
+            - name: POSTGRES_URL
+              valueFrom:
+                secretKeyRef:
+                  name: infrastructure-secret
+                  key: POSTGRES_URL
             - name: POSTGRES_DB
               valueFrom:
                 secretKeyRef:
