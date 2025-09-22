@@ -1,7 +1,7 @@
 # Helm Repo
 helm repo add doppler https://helm.doppler.com
 helm repo add kong https://charts.konghq.com
-helm repo add cnpg https://cloudnative-pg.github.io/charts
+#helm repo add cnpg https://cloudnative-pg.github.io/charts
 helm repo update
 
 # Doppler
@@ -15,4 +15,4 @@ helm install kong kong/ingress -n kong --create-namespace
 kubectl apply -f https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml
 
 # CloudNative PG
-helm upgrade --install cnpg --namespace cnpg-system --create-namespace cnpg/cloudnative-pg
+#helm upgrade --install cnpg --namespace cnpg-system --create-namespace cnpg/cloudnative-pg
