@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: graphql-deployment
-  namespace: graphql-namespace
+  namespace: graphql
   annotations:
     secrets.doppler.com/reload: 'true'
   labels:

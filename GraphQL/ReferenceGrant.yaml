@@ -2,7 +2,7 @@ apiVersion: gateway.networking.k8s.io/v1beta1
 kind: ReferenceGrant
 metadata:
   name: graphql-referencegrant
-  namespace: graphql-namespace
+  namespace: graphql
 spec:
   from:
     - group: gateway.networking.k8s.io
