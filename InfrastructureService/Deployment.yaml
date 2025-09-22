@@ -23,7 +23,7 @@ spec:
           image: saltman0/nodejs-infrastructure:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 3004
+            - containerPort: 3005
               protocol: TCP
           env:
             - name: NODE_ENV
@@ -56,6 +56,11 @@ spec:
                 secretKeyRef:
                   name: infrastructure-secret
                   key: POSTGRES_PASSWORD
+            - name: POSTGRES_URL
+              valueFrom:
+                secretKeyRef:
+                  name: infrastructure-secret
+                  key: POSTGRES_URL
             - name: POSTGRES_DB
               valueFrom:
                 secretKeyRef:

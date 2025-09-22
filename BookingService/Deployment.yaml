@@ -64,6 +64,11 @@ spec:
                 secretKeyRef:
                   name: booking-secret
                   key: POSTGRES_DB
+            - name: POSTGRES_URL
+              valueFrom:
+                secretKeyRef:
+                  name: booking-secret
+                  key: POSTGRES_URL
             - name: IS_VERBOSE_ENABLED
               valueFrom:
                 secretKeyRef:

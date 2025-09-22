@@ -3,9 +3,6 @@ kind: HTTPRoute
 metadata:
   name: kong-httproute
   namespace: gateway
-  annotations:
-    kubernetes.io/ingress.class: kong
-    konghq.com/plugins: jwt-plugin
 spec:
   parentRefs:
     - name: kong-gateway
@@ -46,3 +43,12 @@ spec:
           namespace: user
           kind: Service
           port: 3004
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: graphql-service
+          namespace: graphql-namespace
+          kind: Service
+          port: 4000

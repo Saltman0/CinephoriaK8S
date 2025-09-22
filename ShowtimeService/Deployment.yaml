@@ -61,6 +61,11 @@ spec:
                 secretKeyRef:
                   name: showtime-secret
                   key: POSTGRES_DB
+            - name: POSTGRES_URL
+              valueFrom:
+                secretKeyRef:
+                  name: showtime-secret
+                  key: POSTGRES_URL
             - name: IS_VERBOSE_ENABLED
               valueFrom:
                 secretKeyRef:
