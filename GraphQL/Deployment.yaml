@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: graphql
-          image: saltman0/graphql:dev
+          image: saltman0/graphql:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4000
