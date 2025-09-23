@@ -4,6 +4,8 @@ namespace: gateway
 resources:
   - HTTPRoute
   - Plugins
+  - Certificate.yaml
   - GatewayClass.yaml
   - Gateway.yaml
+  - Issuer.yaml
   - Namespace.yaml

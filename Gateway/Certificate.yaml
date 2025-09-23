@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kong-certificate
+  namespace: gateway
+spec:
+  secretName: kong-tls
+  dnsNames:
+    - cinephoria.lol
+  issuerRef:
+    name: kong-issuer
+    kind: ClusterIssuer
