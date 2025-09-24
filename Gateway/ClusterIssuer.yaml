@@ -11,5 +11,7 @@ spec:
       name: kong-issuer-private-key
     solvers:
       - http01:
-          ingress:
-            class: kong
+          gatewayHTTPRoute:
+            parentRefs:
+              - name: kong-gateway
+                kind: Gateway
