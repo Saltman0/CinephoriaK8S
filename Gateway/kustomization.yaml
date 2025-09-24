@@ -5,7 +5,7 @@ resources:
   - HTTPRoute
   - Plugins
   - Certificate.yaml
+  - ClusterIssuer.yaml
   - GatewayClass.yaml
   - Gateway.yaml
-  - Issuer.yaml
   - Namespace.yaml
