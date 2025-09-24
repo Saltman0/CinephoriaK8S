@@ -2,7 +2,6 @@
 helm repo add doppler https://helm.doppler.com
 helm repo add kong https://charts.konghq.com
 helm repo add jetstack https://charts.jetstack.io
-helm repo add jetstack https://charts.jetstack.io
 #helm repo add cnpg https://cloudnative-pg.github.io/charts
 helm repo update
 
