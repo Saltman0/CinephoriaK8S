@@ -8,6 +8,7 @@ metadata:
 spec:
   parentRefs:
     - name: kong-gateway
+      sectionName: https
   hostnames:
     - "cinephoria.lol"
   rules:
