@@ -15,6 +15,9 @@ spec:
         certificateRefs:
           - kind: Secret
             name: kong-gateway-tls-secret
+      allowedRoutes:
+        namespaces:
+          from: All
     - name: http
       protocol: HTTP
       port: 80
