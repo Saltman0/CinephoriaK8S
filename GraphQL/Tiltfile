@@ -1,8 +1,8 @@
-docker_build('saltman0/graphql:dev', '../../CinephoriaGraphQL')
+docker_build('saltman0/graphql:1.0.0', '../../CinephoriaGraphQL')
 
 k8s_resource(
     new_name='graphql',
     workload='graphql-deployment',
-    objects=['graphql-doppler-secret', 'graphql-namespace', 'graphql-referencegrant', 'graphql-doppler-token-secret'],
+    objects=['graphql-doppler-secret', 'graphql', 'graphql-referencegrant', 'graphql-doppler-token-secret'],
     labels=["backend"]
 )
