@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: booking-nodejs
-          image: saltman0/nodejs-booking:1.0.0
+          image: saltman0/cinephoria-booking-service:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001

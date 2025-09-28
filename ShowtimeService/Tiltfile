@@ -1,4 +1,4 @@
-docker_build('saltman0/nodejs-showtime:1.0.0', '../../CinephoriaShowtimeService')
+docker_build('saltman0/cinephoria-showtime-service:latest', '../../CinephoriaShowtimeService')
 
 k8s_resource(
     new_name='showtime-nodejs',

@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: showtime-nodejs
-          image: saltman0/nodejs-showtime:1.0.0
+          image: saltman0/cinephoria-showtime-service:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3003
