@@ -1,0 +1,5 @@
+k8s_resource(
+    new_name='jwt',
+    objects=['jwt-plugin', 'jwt-consumer', 'jwt-secret'],
+    labels=["backend"]
+)

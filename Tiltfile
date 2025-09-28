@@ -1,8 +1,8 @@
 k8s_yaml(kustomize('.'))
 
-if not os.path.exists("./Gateway") :
+if not os.path.exists("./Gateway/Development") :
     fail("Gateway directory does not exists !")
-include('./Gateway/Tiltfile')
+include('./Gateway/Development/Tiltfile')
 
 if not os.path.exists("./MessageBroker") :
     fail("MessageBroker directory does not exists !")
