@@ -1,5 +1,9 @@
 k8s_yaml(kustomize('.'))
 
+if not os.path.exists("./ArgoCD") :
+    fail("Gateway directory does not exists !")
+include('./ArgoCD/Tiltfile')
+
 if not os.path.exists("./Gateway/Development") :
     fail("Gateway directory does not exists !")
 include('./Gateway/Development/Tiltfile')

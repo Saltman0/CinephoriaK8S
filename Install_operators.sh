@@ -12,9 +12,14 @@ helm install --generate-name doppler/doppler-kubernetes-operator
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.2.1/standard-install.yaml
 helm install kong kong/ingress -n kong --create-namespace
 
+# Argo CD
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
 # RabbitMQ
 kubectl apply -f https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml
 
+# Cert-manager
 helm install cert-manager jetstack/cert-manager \
     --namespace cert-manager \
     --set crds.enabled=true \

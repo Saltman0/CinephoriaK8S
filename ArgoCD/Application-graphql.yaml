@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-application-graphql
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Saltman0/CinephoriaK8S
+    targetRevision: main
+    path: GraphQL
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: graphql
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
