@@ -18,6 +18,6 @@ spec:
             value: /graphql
       backendRefs:
         - name: graphql-service
-          namespace: graphql-namespace
+          namespace: graphql
           kind: Service
           port: 4000
