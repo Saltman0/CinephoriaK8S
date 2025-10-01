@@ -20,14 +20,15 @@ spec:
     spec:
       containers:
         - name: booking-nodejs
-          image: saltman0/cinephoria-booking-service:latest
+          image: saltman0/cinephoria-booking:1.0.2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001
               protocol: TCP
-          #volumeMounts:
-            #- mountPath: "/mnt/data"
-              #name: booking-postgresql-database
+              #volumeMounts:
+          #- mountPath: "/mnt/data"
+          #name: booking-postgresql-database
+
           resources:
             requests:
               cpu: "200m"
@@ -111,8 +112,8 @@ spec:
                 secretKeyRef:
                   name: booking-secret
                   key: RABBITMQ_PASSWORD
-      #volumes:
-        #- name: booking-postgresql-database
+                  #volumes:
+          #- name: booking-postgresql-database
           #persistentVolumeClaim:
-            #claimName: booking-postgresql-persistentvolumeclaim
+          #claimName: booking-postgresql-persistentvolumeclaim
       restartPolicy: Always
