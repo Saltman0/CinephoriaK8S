@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: infrastructure-nodejs
-          image: saltman0/cinephoria-infrastructure-service:latest
+          image: saltman0/cinephoria-infrastructure:1.0.2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3005
