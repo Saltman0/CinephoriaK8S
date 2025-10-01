@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: user-nodejs
-          image: saltman0/cinephoria-user-service:latest
+          image: saltman0/cinephoria-user:1.0.2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3004
