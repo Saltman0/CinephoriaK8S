@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: movie-nodejs
-          image: saltman0/cinephoria-movie-service:latest
+          image: saltman0/cinephoria-movie:1.0.2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3002
