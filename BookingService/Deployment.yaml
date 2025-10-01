@@ -28,6 +28,13 @@ spec:
           #volumeMounts:
             #- mountPath: "/mnt/data"
               #name: booking-postgresql-database
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "400Mi"
+            limits:
+              cpu: "250m"
+              memory: "500Mi"
           env:
             - name: NODE_ENV
               valueFrom:
