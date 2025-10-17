@@ -15,6 +15,9 @@ spec:
     - matches:
         - path:
             type: PathPrefix
+            value: /category
+        - path:
+            type: PathPrefix
             value: /movie
       backendRefs:
         - name: movie-nodejs-service
