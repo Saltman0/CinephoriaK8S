@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: infrastructure-nodejs-deployment
+  name: infrastructure-deployment
   namespace: infrastructure
   annotations:
     secrets.doppler.com/reload: 'true'
   labels:
-    app: infrastructure-nodejs
+    app: infrastructure
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: infrastructure-nodejs
+      app: infrastructure
   template:
     metadata:
-      name: infrastructure-nodejs
+      name: infrastructure
       labels:
-        app: infrastructure-nodejs
+        app: infrastructure
     spec:
       containers:
-        - name: infrastructure-nodejs
-          image: saltman0/cinephoria-infrastructure-service:latest
+        - name: infrastructure
+          image: saltman0/cinephoria-infrastructure:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3005

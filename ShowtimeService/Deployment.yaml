@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: showtime-nodejs-deployment
+  name: showtime-deployment
   namespace: showtime
   annotations:
     secrets.doppler.com/reload: 'true'
   labels:
-    app: showtime-nodejs
+    app: showtime
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: showtime-nodejs
+      app: showtime
   template:
     metadata:
-      name: showtime-nodejs
+      name: showtime
       labels:
-        app: showtime-nodejs
+        app: showtime
     spec:
       containers:
-        - name: showtime-nodejs
-          image: saltman0/cinephoria-showtime-service:latest
+        - name: showtime
+          image: saltman0/cinephoria-showtime:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3003

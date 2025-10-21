@@ -1,33 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: booking-nodejs-deployment
+  name: booking-deployment
   namespace: booking
   annotations:
     secrets.doppler.com/reload: 'true'
   labels:
-    app: booking-nodejs
+    app: booking
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: booking-nodejs
+      app: booking
   template:
     metadata:
-      name: booking-nodejs
+      name: booking
       labels:
-        app: booking-nodejs
+        app: booking
     spec:
       containers:
-        - name: booking-nodejs
-          image: saltman0/cinephoria-booking-service:latest
+        - name: booking
+          image: saltman0/cinephoria-booking:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001
               protocol: TCP
-          #volumeMounts:
-            #- mountPath: "/mnt/data"
-              #name: booking-postgresql-database
           resources:
             requests:
               cpu: "200m"
@@ -111,8 +108,4 @@ spec:
                 secretKeyRef:
                   name: booking-secret
                   key: RABBITMQ_PASSWORD
-      #volumes:
-        #- name: booking-postgresql-database
-          #persistentVolumeClaim:
-            #claimName: booking-postgresql-persistentvolumeclaim
       restartPolicy: Always

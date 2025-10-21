@@ -20,7 +20,7 @@ spec:
             type: PathPrefix
             value: /movie
       backendRefs:
-        - name: movie-nodejs-service
+        - name: movie-service
           namespace: movie
           kind: Service
           port: 3002

@@ -1,8 +1,8 @@
-docker_build('saltman0/cinephoria-showtime-service:latest', '../../CinephoriaShowtimeService')
+docker_build('saltman0/cinephoria-showtime:latest', '../../CinephoriaShowtimeService')
 
 k8s_resource(
-    new_name='showtime-nodejs',
-    workload='showtime-nodejs-deployment',
-    objects=['showtime-doppler-secret', 'showtime', 'showtime-nodejs-referencegrant', 'showtime-doppler-token-secret'],
+    new_name='showtime',
+    workload='showtime-deployment',
+    objects=['showtime-doppler-secret', 'showtime', 'showtime-referencegrant', 'showtime-doppler-token-secret'],
     labels=["backend"]
 )
