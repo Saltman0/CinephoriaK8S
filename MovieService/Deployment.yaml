@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: movie-nodejs-deployment
+  name: movie-deployment
   namespace: movie
   annotations:
     secrets.doppler.com/reload: 'true'
   labels:
-    app: movie-nodejs
+    app: movie
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: movie-nodejs
+      app: movie
   template:
     metadata:
-      name: movie-nodejs
+      name: movie
       labels:
-        app: movie-nodejs
+        app: movie
     spec:
       containers:
-        - name: movie-nodejs
+        - name: movie
           image: saltman0/cinephoria-movie:1.0.2
           imagePullPolicy: IfNotPresent
           ports:

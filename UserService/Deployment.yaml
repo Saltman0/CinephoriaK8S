@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-nodejs-deployment
+  name: user-deployment
   namespace: user
   annotations:
     secrets.doppler.com/reload: 'true'
   labels:
-    app: user-nodejs
+    app: user
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-nodejs
+      app: user
   template:
     metadata:
-      name: user-nodejs
+      name: user
       labels:
-        app: user-nodejs
+        app: user
     spec:
       containers:
-        - name: user-nodejs
+        - name: user
           image: saltman0/cinephoria-user:1.0.2
           imagePullPolicy: IfNotPresent
           ports:

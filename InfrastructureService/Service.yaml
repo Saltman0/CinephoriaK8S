@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: infrastructure-nodejs-service
+  name: infrastructure-service
   namespace: infrastructure
 spec:
   selector:
-    app: infrastructure-nodejs
+    app: infrastructure
   ports:
     - protocol: TCP
       port: 3005

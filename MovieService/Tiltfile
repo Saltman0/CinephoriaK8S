@@ -1,8 +1,8 @@
-docker_build('saltman0/cinephoria-movie-service:latest', '../../CinephoriaMovieService')
+docker_build('saltman0/cinephoria-movie:latest', '../../CinephoriaMovieService')
 
 k8s_resource(
-    new_name='movie-nodejs',
-    workload='movie-nodejs-deployment',
-    objects=['movie-doppler-secret', 'movie', 'movie-nodejs-referencegrant', 'movie-doppler-token-secret'],
+    new_name='movie',
+    workload='movie-deployment',
+    objects=['movie-doppler-secret', 'movie', 'movie-referencegrant', 'movie-doppler-token-secret'],
     labels=["backend"]
 )

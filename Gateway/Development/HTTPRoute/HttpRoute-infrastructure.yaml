@@ -23,7 +23,7 @@ spec:
             type: PathPrefix
             value: /incident
       backendRefs:
-        - name: infrastructure-nodejs-service
+        - name: infrastructure-service
           namespace: infrastructure
           kind: Service
           port: 3005

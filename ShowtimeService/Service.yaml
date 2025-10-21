@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: showtime-nodejs-service
+  name: showtime-service
   namespace: showtime
 spec:
   selector:
-    app: showtime-nodejs
+    app: showtime
   ports:
     - protocol: TCP
       port: 3003

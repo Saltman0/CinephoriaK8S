@@ -14,7 +14,7 @@ spec:
             type: PathPrefix
             value: /showtime
       backendRefs:
-        - name: showtime-nodejs-service
+        - name: showtime-service
           namespace: showtime
           kind: Service
           port: 3003

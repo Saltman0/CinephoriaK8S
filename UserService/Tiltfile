@@ -1,8 +1,8 @@
-docker_build('saltman0/cinephoria-user-service:latest', '../../CinephoriaUserService')
+docker_build('saltman0/cinephoria-user:latest', '../../CinephoriaUserService')
 
 k8s_resource(
-    new_name='user-nodejs',
-    workload='user-nodejs-deployment',
-    objects=['user-doppler-secret', 'user', 'user-nodejs-referencegrant', 'user-doppler-token-secret'],
+    new_name='user',
+    workload='user-deployment',
+    objects=['user-doppler-secret', 'user', 'user-referencegrant', 'user-doppler-token-secret'],
     labels=["backend"]
 )

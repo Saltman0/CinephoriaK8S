@@ -12,9 +12,12 @@ spec:
     - matches:
         - path:
             type: PathPrefix
+            value: /login
+        - path:
+            type: PathPrefix
             value: /user
       backendRefs:
-        - name: user-nodejs-service
+        - name: user-service
           namespace: user
           kind: Service
           port: 3004

@@ -17,7 +17,7 @@ spec:
             type: PathPrefix
             value: /booking
       backendRefs:
-        - name: booking-nodejs-service
+        - name: booking-service
           namespace: booking
           kind: Service
           port: 3001
