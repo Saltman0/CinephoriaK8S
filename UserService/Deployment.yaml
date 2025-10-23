@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: user
-          image: saltman0/cinephoria-user:1.0.2
+          image: saltman0/cinephoria-user:1.0.3
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3004
