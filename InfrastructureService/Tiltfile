@@ -1,4 +1,4 @@
-docker_build('saltman0/cinephoria-infrastructure:latest', '../../CinephoriaInfrastructureService')
+docker_build('saltman0/cinephoria-infrastructure', '../../CinephoriaInfrastructureService')
 
 k8s_resource(
     new_name='infrastructure',

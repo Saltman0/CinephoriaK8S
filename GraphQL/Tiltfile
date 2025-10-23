@@ -1,4 +1,4 @@
-docker_build('saltman0/cinephoria-graphql:latest', '../../CinephoriaGraphQL')
+docker_build('saltman0/cinephoria-graphql', '../../CinephoriaGraphQL')
 
 k8s_resource(
     new_name='graphql',

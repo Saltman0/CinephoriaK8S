@@ -1,4 +1,4 @@
-docker_build('saltman0/cinephoria-movie:latest', '../../CinephoriaMovieService')
+docker_build('saltman0/cinephoria-movie', '../../CinephoriaMovieService')
 
 k8s_resource(
     new_name='movie',

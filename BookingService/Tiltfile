@@ -1,4 +1,4 @@
-docker_build('saltman0/cinephoria-booking:latest', '../../CinephoriaBookingService')
+docker_build('saltman0/cinephoria-booking', '../../CinephoriaBookingService')
 
 k8s_resource(
     new_name='booking',
