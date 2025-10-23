@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: showtime
-          image: saltman0/cinephoria-showtime:latest
+          image: saltman0/cinephoria-showtime:1.0.3
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3003
