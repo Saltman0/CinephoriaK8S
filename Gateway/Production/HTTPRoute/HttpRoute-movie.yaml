@@ -19,6 +19,9 @@ spec:
         - path:
             type: PathPrefix
             value: /movie
+        - path:
+            type: PathPrefix
+            value: /rating
       backendRefs:
         - name: movie-service
           namespace: movie
