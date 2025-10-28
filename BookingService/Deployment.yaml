@@ -108,4 +108,10 @@ spec:
                 secretKeyRef:
                   name: booking-secret
                   key: RABBITMQ_PASSWORD
+            - name: STRIPE_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: booking-secret
+                  key: STRIPE_SECRET_KEY
+
       restartPolicy: Always
