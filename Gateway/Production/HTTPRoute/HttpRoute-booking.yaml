@@ -16,6 +16,9 @@ spec:
         - path:
             type: PathPrefix
             value: /booking
+        - path:
+            type: PathPrefix
+            value: /payment
       backendRefs:
         - name: booking-service
           namespace: booking
