@@ -15,6 +15,12 @@ spec:
     - matches:
         - path:
             type: PathPrefix
+            value: /login
+        - path:
+            type: PathPrefix
+            value: /password
+        - path:
+            type: PathPrefix
             value: /user
       backendRefs:
         - name: user-service
