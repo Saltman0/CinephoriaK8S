@@ -33,11 +33,6 @@ spec:
               cpu: "250m"
               memory: "500Mi"
           env:
-            - name: PORT
-              valueFrom:
-                secretKeyRef:
-                  name: dashboard-secret
-                  key: PORT
             - name: MONGODB_URI
               valueFrom:
                 secretKeyRef:
@@ -53,19 +48,4 @@ spec:
                 secretKeyRef:
                   name: dashboard-secret
                   key: JWT_SECRET
-            - name: RABBITMQ_IP
-              valueFrom:
-                secretKeyRef:
-                  name: dashboard-secret
-                  key: RABBITMQ_IP
-            - name: RABBITMQ_USER
-              valueFrom:
-                secretKeyRef:
-                  name: dashboard-secret
-                  key: RABBITMQ_USER
-            - name: RABBITMQ_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: dashboard-secret
-                  key: RABBITMQ_PASSWORD
       restartPolicy: Always
