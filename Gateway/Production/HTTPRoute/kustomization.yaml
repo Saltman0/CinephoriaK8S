@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: gateway
 resources:
   - HttpRoute-booking.yaml
+  - HttpRoute-dashboard.yaml
   - HttpRoute-graphql.yaml
   - HttpRoute-infrastructure.yaml
   - HttpRoute-movie.yaml
