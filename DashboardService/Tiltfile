@@ -1,0 +1,8 @@
+docker_build('saltman0/cinephoria-dashboard', '../../cinephoria-dashboard-service')
+
+k8s_resource(
+    new_name='dashboard',
+    workload='dashboard-deployment',
+    objects=['dashboard-doppler-secret', 'dashboard', 'dashboard-referencegrant', 'dashboard-doppler-token-secret'],
+    labels=["backend"]
+)

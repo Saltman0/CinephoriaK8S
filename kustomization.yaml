@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ArgoCD
   - BookingService
+  - DashboardService
   - Gateway
   - GraphQL
   - InfrastructureService
