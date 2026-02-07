@@ -1,6 +1,7 @@
 k8s_resource(
     new_name='argocd',
-    objects=['argocd', 'argocd-application-booking', 'argocd-application-graphql', 'argocd-application-infrastructure',
-    'argocd-application-movie', 'argocd-application-showtime', 'argocd-application-user'],
+    objects=['argocd', 'argocd-application-booking', 'argocd-application-dashboard', 'argocd-application-graphql',
+    'argocd-application-infrastructure','argocd-application-movie', 'argocd-application-showtime',
+    'argocd-application-user'],
     labels=["backend"]
 )

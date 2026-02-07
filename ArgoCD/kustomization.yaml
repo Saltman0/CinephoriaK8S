@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: argocd
 resources:
   - Application-booking.yaml
+  - Application-dashboard.yaml
   - Application-graphql.yaml
   - Application-infrastructure.yaml
   - Application-movie.yaml
