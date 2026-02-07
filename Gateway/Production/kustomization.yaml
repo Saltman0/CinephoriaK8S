@@ -6,6 +6,6 @@ resources:
   - Plugins
   - Certificate.yaml
   - ClusterIssuer.yaml
-  - GatewayClass.yaml
   - Gateway.yaml
+  - GatewayClass.yaml
   - Namespace.yaml
