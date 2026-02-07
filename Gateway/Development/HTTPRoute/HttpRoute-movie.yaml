@@ -3,8 +3,6 @@ kind: HTTPRoute
 metadata:
   name: kong-httproute-movie
   namespace: gateway
-  annotations:
-    cert-manager.io/issuer: kong-issuer
 spec:
   parentRefs:
     - name: kong-gateway

@@ -15,6 +15,7 @@ Ce projet est destiné à la création et l'orchestration des différents micros
 * **[Doppler](https://www.doppler.com/)**
 * **Les différents microservices de l'application dans le même dossier que** `CinephoriaK8S`:
    * [CinephoriaBookingService](https://github.com/Saltman0/CinephoriaBookingService)
+   * [cinephoria-dashboard-service](https://github.com/Saltman0/cinephoria-dashboard-service)
    * [CinephoriaGraphQL](https://github.com/Saltman0/CinephoriaGraphQL)
    * [CinephoriaInfrastructureService](https://github.com/Saltman0/CinephoriaInfrastructureService)
    * [CinephoriaMovieService](https://github.com/Saltman0/CinephoriaMovieService)
@@ -40,6 +41,7 @@ Voici la liste des différentes configurations à générer (:warning: il est im
 le nommage des projets suivants, sinon le cluster ne pourra pas envoyer correctement les secrets provenant de Doppler) :
 
 * cinephoria-booking-service
+* cinephoria-dashboard-service
 * cinephoria-graphql
 * cinephoria-infrastructure-service
 * cinephoria-movie-service

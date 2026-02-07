@@ -3,12 +3,12 @@ kind: HTTPRoute
 metadata:
   name: kong-httproute-infrastructure
   namespace: gateway
-  annotations:
-    cert-manager.io/issuer: kong-issuer
 spec:
   parentRefs:
     - name: kong-gateway
       sectionName: https
+    - name: kong-gateway
+      sectionName: http
   hostnames:
     - "cinephoria.lol"
   rules:

@@ -3,6 +3,8 @@ kind: Gateway
 metadata:
   name: kong-gateway
   namespace: gateway
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-gateway"
 spec:
   gatewayClassName: kong-gateway-class
   listeners:
