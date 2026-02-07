@@ -13,3 +13,10 @@ spec:
       default_user=Saltman
       default_pass=B9jgWA56WKMH46fukxc1NP83Q0TgKEQbAUqd1z947Thwjc5rJWSv48u5NuaUwjRz
   replicas: 1
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "200m"
+      memory: "256Mi"
