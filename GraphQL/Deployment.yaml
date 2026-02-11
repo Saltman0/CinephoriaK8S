@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: graphql
-          image: saltman0/cinephoria-graphql:1.0.3
+          image: saltman0/cinephoria-graphql:1.0.4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4000
