@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: dashboard
-          image: saltman0/cinephoria-dashboard:1.0.0
+          image: saltman0/cinephoria-dashboard:1.0.3
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3006
